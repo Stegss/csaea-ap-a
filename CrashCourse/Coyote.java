@@ -16,12 +16,41 @@ public class Coyote {
 
         health = 100;
         height = 1;
+        weight = 1;
+        isHungry = false;
+        hasPair = false;
 
+    }
+
+    public void attack() {
+        health -= health;
+    }
+
+    public void move() {
+        isHungry = true;
+        weight -= 1;
+    }
+
+    public void buy() {
+        health += 1;
+    }
+
+    public void retreat() {
+        health -= 1;
+    }
+
+    public void paint() {
+        hasPair = true;
     }
 
     public void eat() {
         isHungry = false;
         weight = weight + 1;
+    }
+
+    public void grow() {
+        age += 1;
+        height += 1;
     }
 
 }
