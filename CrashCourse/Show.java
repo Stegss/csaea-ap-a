@@ -33,22 +33,22 @@ public class Show {
 
     public void release() {
         episodes += 1;
-        System.out.println(title + " now has " + episodes + " epidoes!");
+        System.out.println(title + " now has " + episodes + " episodes!");
     }
 
     public void end() {
         boolean bowl = inDevelopment;
         if(bowl) {
             inDevelopment = false;
-            System.out.println(title + "is no longer in production.");
+            System.out.println(title + " is no longer in production.");
         } else {
             inDevelopment = true;
-            System.out.println(title + "has been renwed and is back in production!");
+            System.out.println(title + " has been renwed and is back in production!");
         }
     }
 
     public void good() {
-        if (rating >= 10.0) {
+        if (rating >= 9.0) {
             rating = 10.0;
             System.out.println("Your ratings on " + title + " can't get any better!");
         } else {
@@ -71,11 +71,12 @@ public class Show {
         age += 1;
         System.out.println("Happy anniversary, " + title + "!");
         System.out.println("In year " + age + ", it has");
-        System.out.println(seasons + " seasons and " + episodes + "episodes!");
+        System.out.println(seasons + " seasons and " + episodes + " episodes!");
     }
 
     public void advertise() {
         if(views < 10000) {
+            views += 5;
             views = views * 3;
             watchtime += 180;
             System.out.println(title + " has gotten a boost, and is now at " + views + " views!");
