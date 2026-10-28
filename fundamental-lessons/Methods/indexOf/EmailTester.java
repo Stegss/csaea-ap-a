@@ -30,6 +30,11 @@ public class EmailTester {
         System.out.println(jojo.getUser());
 
         System.out.println(joseph.getDomain());
+        System.out.println(jojo.getDomain());
+
+        System.out.println(jojo.getFirstName());
+        System.out.println(jojo.changeDomain("Arben"));
+        System.out.println(jojo.getLabel());
 
     }
 
