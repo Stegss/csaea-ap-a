@@ -10,6 +10,8 @@ public class Robot {
     private double battery;
     private boolean isOn; 
 
+    private static int robotCount;
+
     // CONSTRUCTOR:
     // special method; starting point for new objects
     // CONSTRUCTOR: no return type, same name as class
@@ -19,6 +21,7 @@ public class Robot {
         this.name = name;
         this.serial = serial;
         this.battery = battery;
+        robotCount++;
 
         // DEFAULT STATE: every Robot starts off
         this.isOn = false;
@@ -51,6 +54,16 @@ public class Robot {
      public boolean serialContains(String part) {
             return serial.indexOf(part) != -1;
      
+     }
+
+
+     public void randomDrain() {
+        double drain = Math.random() * 10;
+        battery = Math.max(0, battery - drain);
+     }
+
+     public int getRobotCount() {
+        return robotCount;
      }
 
 
